@@ -1,0 +1,411 @@
+@use "./partials/globals" as *;
+@use "./partials/variables" as *;
+@use "./partials/fonts" as *;
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.headerElements{
+    @include mobile{
+        display: flex;
+    }
+
+    @include tablet{
+        display: flex
+    }
+}
+
+.header{
+    background-color: $bandsite-black;
+
+    @include mobile{
+        width: 211vw;
+    }
+
+    &__nav{
+        @include mobile{
+            display: flex;
+            position: relative;
+            right: 2rem;
+        
+            li{
+                margin-top: 1.6rem;
+                padding: 0;
+                list-style: none;   
+            }
+
+            a{
+                @include mobile{
+                    color: $white;
+                    font-size: 0.875rem;
+                    margin-left: 5rem;
+                    text-decoration: none; 
+                }  
+            }
+        }
+
+        @include tablet{
+            display: flex;
+        }
+    }
+
+    @include tablet{
+        width: 208vw;
+    }
+}
+
+ul.header__nav{
+    @include tablet{
+        margin-left: 2rem;
+    }
+}
+
+.header__logo{
+    @include mobile{
+        margin-top: 1rem;
+        position: relative;
+        left: 13rem;
+    }
+
+    @include tablet{
+        margin-top: 1rem;
+        margin-left: 1rem;
+    }
+}
+
+.nav__item > a{
+    @include tablet{
+        color: $white;
+        font-size: 0.875rem;
+        text-decoration: none; 
+    } 
+}
+
+li{
+    @include tablet{
+        padding: 0;
+        list-style: none; 
+        margin-right: 2.5rem;
+        position: relative;
+        bottom:0.1rem;
+    }  
+}
+
+.about-section{
+    color:$bandsite-black;
+
+    &__heading{
+        @include mobile{
+            padding-left: 1rem;
+            position: relative;
+            bottom: 2rem;
+            font-size: 1.5rem;
+        }
+
+        @include tablet {
+            font-size: 3.5rem;
+            margin-left: 4rem;
+        }
+    }
+
+    &__band-img img {
+        @include mobile{
+            width: 90vw;
+            height: 41vh;
+            margin-left: 1rem;
+            margin-right: 1rem;
+            position: relative;
+            bottom: 2.5rem;
+        }
+
+        @include tablet{
+            width: 146vw;
+            height: 102vh;
+            margin-left: 9rem;
+            margin-right: 1rem;
+            position: relative;
+            top: 0;
+        }
+    }
+
+    &__quote-container{
+        @include mobile{
+            margin-right: 1rem;
+            width: 100vw;
+            position: relative;
+            bottom: 2.8rem;
+        }
+        
+        @include tablet {
+            width: 110vw;
+            margin-left: 8.855rem;
+        }   
+
+        .quote{
+            @include mobile{
+                font-size: 1rem;
+                margin-left: 1rem;
+                margin-right: 1rem;
+                line-height: 1.48rem;
+            }
+
+            @include tablet {
+                font-size: 1.7rem;
+            }
+        }
+
+        .author{
+            @include mobile{
+                margin-left: 1rem;
+                line-height: 1.48rem;
+                position: relative;
+                bottom: 1rem;
+            }
+
+            @include tablet{
+                font-size: 1.4rem;
+            }
+        }
+    }
+}
+
+.details-container p {
+    @include mobile{
+        margin-left: 1rem;
+        position: relative;
+        bottom: 0.5rem;
+    }
+}
+
+.details-container {
+    margin-left: 1rem;
+
+    @include mobile {
+        margin: 0;
+    }
+
+    @include tablet{
+        font-size:2rem;
+    }
+}
+
+.details-child {
+    @include mobile{
+        width: 100vw;
+        margin-left: 0;
+        line-height: 1.30rem;
+    }
+
+    @include tablet {
+        width: 45%;
+        float: left;
+        margin-right: 2rem;
+        position: relative;
+        bottom: 1rem;
+    }
+}
+
+.details-child > p {
+    font-size: 1.2rem;
+}
+
+.photo-gallery {
+    justify-content: flex-start;
+    background-color: $alabaster;
+
+    &__heading{
+        color:$bandsite-black;
+        margin-left: 1rem;
+        font-size: 1.5rem;
+        
+        @include mobile{
+            position: relative;
+            top: 1rem;
+        }
+
+        @include tablet {
+            font-size: 3.2rem;
+            position: relative;
+            top: 2rem;
+            right: 4rem;
+        }
+    }
+
+    &__item {
+        @include mobile {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            margin-left: 1rem;
+            width: 95vw;
+            height: 48vh;
+            padding-bottom: 1rem;
+            position: relative;
+            top: 0.5rem;
+        }
+
+        @include tablet {
+            width: 30%;
+            margin-right: 1.24rem;
+            position: relative;
+            right: 3rem;
+            padding-bottom: 1rem;
+        }
+    }
+}
+
+.comments-section h1 {
+    color: $bandsite-black;
+
+    @include mobile{
+        margin-left: 1rem;
+        font-size: 1.5rem;
+        position: relative;
+        bottom: 0.5rem;
+    }
+
+    @include tablet {
+        margin-top: 6rem;
+        font-size: 3.5rem;
+        position: relative;
+        right: 3rem;
+    }
+}
+
+.comments-section > .comments-input img{
+    @include mobile{
+        width: 3rem;
+        height: 3rem;
+        border-radius: 50%;
+        margin-left: 1rem;
+        position: relative;
+        top: 1rem;
+    }
+
+    @include tablet {
+        width: 3rem;
+        height: 3rem;
+        border-radius: 50%;
+        position: relative;
+        top: 0.5rem;
+        margin-left: 1rem;
+    }
+
+    @include desktop{
+        margin-left: 21rem;
+    }
+
+}
+
+.comments-input {
+    @include mobile{
+        display: flex;
+        padding-right: 1.25rem;
+        position: relative;
+        bottom: 1rem;
+    }
+} 
+
+.comments-section form {
+    margin-bottom: 0.625rem;
+    margin-left: 0.625rem;
+    padding-bottom: 1.25rem;
+
+    @include mobile {
+        margin-left: 0.625rem;
+        padding-bottom: 1.25rem;
+    }
+
+    @include tablet{
+        margin-left: 6rem;
+        position: relative;
+        bottom: 4rem;
+    }
+
+    @include desktop{
+        margin-left: 25rem;
+    }
+}
+
+.comments-section textarea{
+    width: 100%;
+    padding: 0.938rem 0 0 1.25rem;
+    border-radius: 0.25rem;
+    margin-top: 0.25rem;
+    resize: none;
+    box-sizing: border-box;
+    border-color: 1px solid $mercury;
+    border-width: 1px;
+
+    @include mobile {
+        margin-bottom: 1.25rem;
+    }
+}
+
+textarea#comment{
+    min-height: 6.75rem;
+}
+
+::placeholder{
+    color: $bandsite-darkBlack;
+}
+
+textarea:active { 
+    border: 1px solid $bandsite-black;
+}
+
+textarea:invalid {
+    border: 1px solid $red;
+}
+
+label {
+    color: $silver;
+}
+
+.comments-form__button {
+    color: $white;
+    background-color: $bandsite-black;
+    line-height: 2.5rem;
+    float: right;
+    border-radius: 0.25rem;
+    width: 9.375rem;
+    margin-top: 1rem;
+    margin-bottom: 0.117rem;
+
+    @include mobile {
+        float:none;
+        width: 100%;
+        margin-top: 0rem;
+    }
+}
+
+.comments-container{
+    @include mobile{
+        position: relative;
+        bottom: 2rem;
+        margin-left: 1rem;
+    }
+
+    @include tablet {
+        margin-left: 5.5rem;
+    }
+
+    @include desktop{
+        margin-left: 20rem;
+    }
+}
+
+.user-comments{
+    border-top: 1px solid $mercury;
+}
+
+article.comment > span {
+    color: $mercury;
+    @include mobile{
+        float: right;
+        position: relative;
+        bottom: 2.4rem;
+    }
+}

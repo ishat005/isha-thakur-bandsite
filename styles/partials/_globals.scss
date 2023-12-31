@@ -1,0 +1,218 @@
+@use "./variables" as *;
+
+body { 
+    margin: 0; 
+    padding: 0;
+}
+
+.background-image{
+    @include mobile{
+        background-image: url('../../assets/images/hero-bio.jpg');
+        background-size: cover;
+        display: block;
+        width: 211vw;
+        height: 97vh;
+        position: relative;
+        bottom: 1.5rem;
+        background-color: rgba(0,0,0,0.5);
+    }
+
+    @include tablet{
+        background-image: url(../../assets/images/hero-bio.jpg);
+        background-size: cover;
+        display: block;
+        height: 179vh;
+        width: 208vw;
+        position: relative;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+}
+
+.background-image > .heading{
+    color: $white;
+
+    @include mobile{
+        position: relative;
+        top: 5.7rem;
+        left: 1rem;
+    }
+
+    @include tablet{
+        position: absolute;
+        top: 19.7rem;
+        left: 5rem;
+        font-size: 5rem;
+    }
+}
+
+.footer {
+    background-color: $bandsite-black;
+
+    @include tablet{
+        width: 238vw;
+    }
+
+    @include mobile{
+        width: 216vw;
+    }
+}
+
+.container-footer {
+    &__heading {
+        color: $white;
+
+        @include mobile {
+            margin-left: 1rem;
+            padding-top: 1rem;
+            font-size: 1.5rem;
+        }
+
+        @include tablet {
+            display: flex;
+            margin: 1rem;
+            position: relative;
+            top: 2rem;
+            left: 1rem;
+        }
+    }
+}
+
+.container-management{
+    &__first {
+        color: $white;
+
+        ul{
+            @include mobile{
+                font-size: 0.8rem;
+            }
+        }
+
+        @include mobile {
+            padding-bottom: 1rem;
+            margin-top: 3%;
+            position:relative;
+            right:1rem;
+        }
+
+        @include tablet{
+            line-height: 1.5rem;
+        }
+    }
+
+    &__second, &__third {
+        color: $white;
+
+        ul{
+            @include mobile{
+                font-size: 0.8rem;
+            }
+        }
+
+        @include mobile {
+            padding-bottom: 1rem;
+            position:relative;
+            right:1rem;
+        }
+
+        @include tablet{
+            line-height: 1.5rem;
+        }
+    }
+}
+
+.container-icons {
+    list-style-type: none;
+
+    @include tablet {
+        display: flex;
+        position: relative;
+        left: 11rem;
+    }
+}
+
+ul > .container-management__email, 
+ul > .container-management__bold, 
+ul > .container-management__address {
+    a {
+        text-decoration: none;
+        color: $white;
+    }
+    
+    list-style-type: none;
+}
+
+ul > .container-management__address, ul > .container-management__email{
+    @include mobile{
+        margin-top: 1rem;
+    }
+
+    @include tablet{
+        margin-top: 1rem;
+        width: 54%;
+    }
+}
+
+ul > .container-management__bold {
+    font-weight: bold;
+
+    @include mobile {
+        margin-bottom: 2%;
+    }
+}
+
+.container-icons{
+    @include mobile {
+        display: flex;
+        position: relative;
+        right: 1rem;
+    }
+}
+
+.footer-class{
+    &__icons {
+        @include mobile {
+            padding-right: 1.25rem;
+            margin-left: 0;
+        }
+    }
+}
+
+.footer-logo {
+    @include mobile {
+        position: relative; 
+        margin-left: 1.8rem;
+        margin-top: 5rem;
+    }
+}
+
+p.copyright{
+    @include mobile{
+        font-size: 0.8rem;
+    }
+
+    @include tablet{
+        position: relative;
+        right: 41rem;
+        padding-bottom: 3rem;
+    }
+}
+
+.management{
+    @include tablet {
+        display: flex;
+    }
+}
+
+a.footer-class__logo{
+    @include mobile{
+        position: relative;
+        bottom: 0.5rem;
+        left: 0rem;
+    }
+
+    @include tablet{
+        position: relative;
+        bottom: 14rem;
+    }
+}

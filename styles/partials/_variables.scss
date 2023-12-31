@@ -1,0 +1,30 @@
+$desktop-width: 1280px;
+$tablet-min-width: 768px;
+$tablet-max-width: 1280px;
+$mobile-width: 768px;
+
+$bandsite-black: #323232;
+$white: #FFFFFF;
+$mercury: #E1E1E1;
+$silver: #AFAFAF;
+$bandsite-darkBlack: #000000;
+$alabaster: #FAFAFA;
+$red: #D22D2D;
+
+@mixin mobile {
+    @media only screen and (max-width:$mobile-width) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media only screen and (min-width: $tablet-min-width) and (max-width:$tablet-max-width) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media only screen and (min-width: $desktop-width) {
+        @content;
+    }
+}
