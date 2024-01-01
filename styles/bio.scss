@@ -15,6 +15,10 @@ body{
     @include tablet{
         display: flex
     }
+
+    @include desktop{
+        display: flex;
+    }
 }
 
 .header{
@@ -37,22 +41,29 @@ body{
             }
 
             a{
-                @include mobile{
-                    color: $white;
-                    font-size: 0.875rem;
-                    margin-left: 5rem;
-                    text-decoration: none; 
-                }  
+                color: $white;
+                font-size: 0.875rem;
+                margin-left: 5rem;
+                text-decoration: none;  
             }
         }
 
         @include tablet{
             display: flex;
         }
+
+        @include desktop{
+            display: flex;
+        }
     }
 
     @include tablet{
         width: 208vw;
+    }
+
+    @include desktop{
+        width: 210vw;
+        padding-bottom:1rem;
     }
 }
 
@@ -73,6 +84,11 @@ ul.header__nav{
         margin-top: 1rem;
         margin-left: 1rem;
     }
+
+    @include desktop{
+        margin-top: 1rem;
+        margin-left: 1rem;
+    }
 }
 
 .nav__item > a{
@@ -81,10 +97,24 @@ ul.header__nav{
         font-size: 0.875rem;
         text-decoration: none; 
     } 
+
+    @include desktop{
+        color: $white;
+        font-size: 0.875rem;
+        text-decoration: none; 
+    } 
 }
 
 li{
     @include tablet{
+        padding: 0;
+        list-style: none; 
+        margin-right: 2.5rem;
+        position: relative;
+        bottom:0.1rem;
+    }  
+
+    @include desktop{
         padding: 0;
         list-style: none; 
         margin-right: 2.5rem;
@@ -108,6 +138,11 @@ li{
             font-size: 3.5rem;
             margin-left: 4rem;
         }
+
+        @include desktop {
+            font-size: 3.5rem;
+            margin-left: 4rem;
+        }
     }
 
     &__band-img img {
@@ -128,6 +163,15 @@ li{
             position: relative;
             top: 0;
         }
+
+        @include desktop{
+            width: 135vw;
+            height: 102vh;
+            margin-left: 9rem;
+            margin-right: 1rem;
+            position: relative;
+            top: 0;
+        }
     }
 
     &__quote-container{
@@ -142,6 +186,12 @@ li{
             width: 110vw;
             margin-left: 8.855rem;
         }   
+
+        @include desktop{
+            width: 110vw;
+            margin-left: 8.855rem;
+            font-size: 2rem;
+        }  
 
         .quote{
             @include mobile{
@@ -166,6 +216,10 @@ li{
 
             @include tablet{
                 font-size: 1.4rem;
+            }
+
+            @include desktop{
+                font-size: 1.5rem;
             }
         }
     }

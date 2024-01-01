@@ -5,26 +5,35 @@ body {
 
 @media only screen and (max-width: 768px) {
   .background-image {
-    background-image: url("../../assets/images/hero-bio.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)), url("../../assets/images/hero-bio.jpg");
     background-size: cover;
     display: block;
     width: 211vw;
     height: 97vh;
     position: relative;
     bottom: 1.5rem;
-    background-color: rgba(0, 0, 0, 0.5);
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 1280px) {
   .background-image {
-    background-image: url(../../assets/images/hero-bio.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../../assets/images/hero-bio.jpg);
     background-size: cover;
     display: block;
     height: 179vh;
     width: 208vw;
     position: relative;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .background-image {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../../assets/images/hero-bio.jpg);
+    background-size: cover;
+    display: block;
+    height: 179vh;
+    width: 208vw;
+    position: relative;
+    bottom: 1.2rem;
   }
 }
 
@@ -46,6 +55,14 @@ body {
     font-size: 5rem;
   }
 }
+@media only screen and (min-width: 768px) and (max-width: 1280px) {
+  .background-image > .heading {
+    position: absolute;
+    top: 29.7rem;
+    left: 14rem;
+    font-size: 5rem;
+  }
+}
 
 .footer {
   background-color: #323232;
@@ -57,7 +74,7 @@ body {
 }
 @media only screen and (max-width: 768px) {
   .footer {
-    width: 216vw;
+    width: 253vw;
   }
 }
 
@@ -220,6 +237,14 @@ ul > .container-management__bold {
   a.footer-class__logo {
     position: relative;
     bottom: 14rem;
+    left: 41rem;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  a.footer-class__logo {
+    position: relative;
+    bottom: 14rem;
+    left: 63rem;
   }
 }
 
@@ -253,6 +278,11 @@ body {
     display: flex;
   }
 }
+@media only screen and (min-width: 1280px) {
+  .headerElements {
+    display: flex;
+  }
+}
 
 .header {
   background-color: #323232;
@@ -273,8 +303,6 @@ body {
     padding: 0;
     list-style: none;
   }
-}
-@media only screen and (max-width: 768px) and (max-width: 768px) {
   .header__nav a {
     color: #FFFFFF;
     font-size: 0.875rem;
@@ -287,9 +315,20 @@ body {
     display: flex;
   }
 }
+@media only screen and (min-width: 1280px) {
+  .header__nav {
+    display: flex;
+  }
+}
 @media only screen and (min-width: 768px) and (max-width: 1280px) {
   .header {
     width: 208vw;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .header {
+    width: 210vw;
+    padding-bottom: 1rem;
   }
 }
 
@@ -312,6 +351,12 @@ body {
     margin-left: 1rem;
   }
 }
+@media only screen and (min-width: 1280px) {
+  .header__logo {
+    margin-top: 1rem;
+    margin-left: 1rem;
+  }
+}
 
 @media only screen and (min-width: 768px) and (max-width: 1280px) {
   .nav__item > a {
@@ -320,8 +365,24 @@ body {
     text-decoration: none;
   }
 }
+@media only screen and (min-width: 1280px) {
+  .nav__item > a {
+    color: #FFFFFF;
+    font-size: 0.875rem;
+    text-decoration: none;
+  }
+}
 
 @media only screen and (min-width: 768px) and (max-width: 1280px) {
+  li {
+    padding: 0;
+    list-style: none;
+    margin-right: 2.5rem;
+    position: relative;
+    bottom: 0.1rem;
+  }
+}
+@media only screen and (min-width: 1280px) {
   li {
     padding: 0;
     list-style: none;
@@ -348,6 +409,12 @@ body {
     margin-left: 4rem;
   }
 }
+@media only screen and (min-width: 1280px) {
+  .about-section__heading {
+    font-size: 3.5rem;
+    margin-left: 4rem;
+  }
+}
 @media only screen and (max-width: 768px) {
   .about-section__band-img img {
     width: 90vw;
@@ -368,6 +435,16 @@ body {
     top: 0;
   }
 }
+@media only screen and (min-width: 1280px) {
+  .about-section__band-img img {
+    width: 135vw;
+    height: 102vh;
+    margin-left: 9rem;
+    margin-right: 1rem;
+    position: relative;
+    top: 0;
+  }
+}
 @media only screen and (max-width: 768px) {
   .about-section__quote-container {
     margin-right: 1rem;
@@ -380,6 +457,13 @@ body {
   .about-section__quote-container {
     width: 110vw;
     margin-left: 8.855rem;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .about-section__quote-container {
+    width: 110vw;
+    margin-left: 8.855rem;
+    font-size: 2rem;
   }
 }
 @media only screen and (max-width: 768px) {
@@ -406,6 +490,11 @@ body {
 @media only screen and (min-width: 768px) and (max-width: 1280px) {
   .about-section__quote-container .author {
     font-size: 1.4rem;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .about-section__quote-container .author {
+    font-size: 1.5rem;
   }
 }
 

@@ -7,25 +7,33 @@ body {
 
 .background-image{
     @include mobile{
-        background-image: url('../../assets/images/hero-bio.jpg');
+        background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)), url('../../assets/images/hero-bio.jpg');
         background-size: cover;
         display: block;
         width: 211vw;
         height: 97vh;
         position: relative;
         bottom: 1.5rem;
-        background-color: rgba(0,0,0,0.5);
     }
 
     @include tablet{
-        background-image: url(../../assets/images/hero-bio.jpg);
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),  url(../../assets/images/hero-bio.jpg);
         background-size: cover;
         display: block;
         height: 179vh;
         width: 208vw;
         position: relative;
         bottom: 0;
-        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    @include desktop{
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),  url(../../assets/images/hero-bio.jpg);
+        background-size: cover;
+        display: block;
+        height: 179vh;
+        width: 208vw;
+        position: relative;
+        bottom: 1.2rem;
     }
 }
 
@@ -44,6 +52,13 @@ body {
         left: 5rem;
         font-size: 5rem;
     }
+
+    @include tablet{
+        position: absolute;
+        top: 29.7rem;
+        left: 14rem;
+        font-size: 5rem;
+    }
 }
 
 .footer {
@@ -54,7 +69,7 @@ body {
     }
 
     @include mobile{
-        width: 216vw;
+        width: 253vw;
     }
 }
 
@@ -214,5 +229,12 @@ a.footer-class__logo{
     @include tablet{
         position: relative;
         bottom: 14rem;
+        left: 41rem;
+    }
+
+    @include desktop{
+        position: relative;
+        bottom: 14rem;
+        left: 63rem;
     }
 }

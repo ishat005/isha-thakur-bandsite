@@ -5,26 +5,35 @@ body {
 
 @media only screen and (max-width: 768px) {
   .background-image {
-    background-image: url("../../assets/images/hero-bio.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)), url("../../assets/images/hero-bio.jpg");
     background-size: cover;
     display: block;
     width: 211vw;
     height: 97vh;
     position: relative;
     bottom: 1.5rem;
-    background-color: rgba(0, 0, 0, 0.5);
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 1280px) {
   .background-image {
-    background-image: url(../../assets/images/hero-bio.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../../assets/images/hero-bio.jpg);
     background-size: cover;
     display: block;
     height: 179vh;
     width: 208vw;
     position: relative;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .background-image {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../../assets/images/hero-bio.jpg);
+    background-size: cover;
+    display: block;
+    height: 179vh;
+    width: 208vw;
+    position: relative;
+    bottom: 1.2rem;
   }
 }
 
@@ -46,6 +55,14 @@ body {
     font-size: 5rem;
   }
 }
+@media only screen and (min-width: 768px) and (max-width: 1280px) {
+  .background-image > .heading {
+    position: absolute;
+    top: 29.7rem;
+    left: 14rem;
+    font-size: 5rem;
+  }
+}
 
 .footer {
   background-color: #323232;
@@ -57,7 +74,7 @@ body {
 }
 @media only screen and (max-width: 768px) {
   .footer {
-    width: 216vw;
+    width: 253vw;
   }
 }
 
@@ -220,6 +237,14 @@ ul > .container-management__bold {
   a.footer-class__logo {
     position: relative;
     bottom: 14rem;
+    left: 41rem;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  a.footer-class__logo {
+    position: relative;
+    bottom: 14rem;
+    left: 63rem;
   }
 }
 
@@ -465,6 +490,11 @@ body {
     width: 205%;
   }
 }
+@media only screen and (min-width: 1280px) {
+  .tables {
+    margin-left: 36rem;
+  }
+}
 
 th {
   color: #E1E1E1;
@@ -538,4 +568,26 @@ tr td:first-child {
 button {
   color: #FFFFFF;
   background-color: #323232;
+}
+@media only screen and (min-width: 1280px) {
+  button {
+    position: relative;
+    top: 1.5rem;
+    height: 40px;
+    border-radius: 4px;
+    left: 1rem;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1280px) {
+  button {
+    position: relative;
+    top: 2rem;
+    height: 40px;
+    border-radius: 4px;
+    left: 5rem;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
 }/*# sourceMappingURL=shows.css.map */
